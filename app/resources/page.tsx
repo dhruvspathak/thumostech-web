@@ -1,7 +1,7 @@
 export default function Resources() {
   return (
     <div className="pt-32 pb-20">
-      <section className="max-w-7xl mx-auto px-8 mb-20">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-20">
         <div className="max-w-3xl">
           <p className="text-primary font-label font-bold tracking-[0.2rem] uppercase text-xs mb-4">
             Intelligence Hub
@@ -15,7 +15,7 @@ export default function Resources() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-8">
+      <section className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <article className="group cursor-pointer">
               <div className="aspect-video rounded overflow-hidden mb-6 relative border border-zinc-900">

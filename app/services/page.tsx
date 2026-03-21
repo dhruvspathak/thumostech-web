@@ -1,7 +1,7 @@
 export default function Services() {
   return (
     <div className="pt-32 pb-20">
-      <section className="max-w-7xl mx-auto px-8 mb-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-24">
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <div className="w-full md:w-3/5">
             <div className="flex items-center gap-3 mb-6">
@@ -24,7 +24,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-8 mb-32">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="kinetic-card p-10 h-full flex flex-col relative overflow-hidden">
             <div className="w-16 h-16 bg-zinc-900 border border-zinc-800 flex items-center justify-center mb-8">

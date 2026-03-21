@@ -7,7 +7,7 @@ export default function Home() {
           <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px]"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-8 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 w-full relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-16">
             <div className="flex-1 space-y-8">
               <div className="inline-flex items-center gap-3 px-4 py-2 rounded bg-surface-container-low border border-primary/20">
@@ -53,7 +53,7 @@ export default function Home() {
       </header>
       
       <section className="py-12 bg-black border-y border-zinc-900">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <p className="text-center font-label uppercase tracking-[0.2rem] text-[10px] text-zinc-500 mb-8">Trusted by Global Infrastructure Leaders</p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500 hover:opacity-100">
             <span className="font-headline font-bold text-xl tracking-tighter text-on-surface">QUANTUM_SEC</span>
@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       <section className="py-32 relative bg-black">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-20 space-y-4">
             <span className="font-label uppercase tracking-[0.2rem] text-xs font-bold text-primary">Operational Capabilities</span>
             <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-on-surface">Core Security Services</h2>
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       <section className="py-32 bg-black">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="lg:w-1/2 space-y-12">
               <div className="space-y-4">
@@ -181,7 +181,7 @@ export default function Home() {
       </section>
 
       <section className="py-32 bg-black">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex justify-between items-end mb-16">
             <div className="space-y-4">
               <span className="font-label uppercase tracking-[0.2rem] text-xs font-bold text-primary">Intelligence Hub</span>

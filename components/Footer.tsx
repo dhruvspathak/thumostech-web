@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-zinc-800 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-4 md:px-8 py-16 max-w-7xl mx-auto w-full">
         <div className="space-y-6">
           <div className="text-lg font-bold text-orange-500 font-headline uppercase tracking-widest">
             Thumos Tech
@@ -105,7 +105,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto py-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 px-8">
+      <div className="max-w-7xl mx-auto py-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 px-4 md:px-8 text-center md:text-left">
         <p className="font-manrope text-sm tracking-widest uppercase text-zinc-500">
           © 2024 Thumos Tech. Kinetic Monolith Security.
         </p>
