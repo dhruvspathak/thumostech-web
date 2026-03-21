@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div className="pt-32 pb-20">
-      <section className="max-w-7xl mx-auto px-8 mb-20">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mb-20">
         <div className="max-w-3xl">
           <p className="text-primary font-label font-bold tracking-[0.2rem] uppercase text-xs mb-4">
             Connect with the Sentinel
@@ -15,7 +15,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         <div className="lg:col-span-7 bg-surface-container-low p-10 md:p-14 rounded border-outline-variant/10 border relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] -z-10 rounded-full"></div>
           <h2 className="font-headline text-3xl font-bold mb-8 uppercase tracking-tighter">Secure Inquiry Form</h2>
@@ -118,7 +118,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-8 mt-32">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 mt-32">
         <div className="relative h-[450px] w-full rounded overflow-hidden border border-outline-variant/10 group">
           <img className="w-full h-full object-cover grayscale brightness-50 contrast-150 opacity-30 group-hover:scale-105 transition-transform duration-[2000ms]" data-alt="Modern dark abstract map of San Francisco area" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa112T1-L7SHargkG9PPrvIOHNNiBUvLnNLZNy-f5C1rU9OjBlWG7Lcg2cLldKyEBwD0xPX21MW5Gqt2CkB6azX68axLFe8tp6t-NJV7vIBFMHmM62yt4khGISWH48qhoIv1SlVYhewkGQl3s7hKJLyWVyEpVuWhXBz2GrQ__PgeEpnxKaVDpvCPXOHc5TB5_6D3zTQ0qeFvhr54kpbqvb21DttBqxAnnLijWuoTwuG2x7j3q4Szmhlbp7PC-Sta6By_qbtJ466MI" />
           <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>

@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="pt-32">
-      <section className="max-w-7xl mx-auto px-8 py-20 flex flex-col md:flex-row items-center gap-16">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 py-20 flex flex-col md:flex-row items-center gap-16">
         <div className="w-full md:w-1/2 space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-surface-container-low border border-orange-500/20">
             <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>verified_user</span>
@@ -30,7 +30,7 @@ export default function About() {
       </section>
 
       <section className="bg-surface-container-low py-28">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
             <div className="space-y-6">
               <h2 className="font-headline text-sm font-bold uppercase tracking-[0.2rem] text-secondary">Our Mission</h2>
@@ -50,7 +50,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-28 max-w-7xl mx-auto px-8">
+      <section className="py-28 max-w-7xl mx-auto px-4 md:px-8">
         <div className="mb-20">
           <h2 className="font-headline text-sm font-bold uppercase tracking-[0.2rem] text-primary mb-4">Leadership</h2>
           <h3 className="font-headline text-5xl font-bold">Engineered by Experts.</h3>
@@ -87,7 +87,7 @@ export default function About() {
       </section>
 
       <section className="bg-surface-container-lowest py-28">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row gap-16">
             <div className="w-full md:w-1/3">
               <h2 className="font-headline text-sm font-bold uppercase tracking-[0.2rem] text-primary mb-4">Our Journey</h2>
@@ -132,7 +132,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-28 max-w-7xl mx-auto px-8">
+      <section className="py-28 max-w-7xl mx-auto px-4 md:px-8">
         <div className="glass-card rounded-sm p-12 border border-zinc-800 overflow-hidden relative orange-glow-box">
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 items-center gap-16">
             <div>
@@ -162,7 +162,7 @@ export default function About() {
       </section>
 
       <section className="py-20 border-t border-zinc-800/50">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex flex-wrap justify-center items-center gap-16 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
             <div className="flex flex-col items-center gap-4 hover:text-primary transition-colors">
               <span className="material-symbols-outlined text-4xl">verified</span>

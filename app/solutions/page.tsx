@@ -1,7 +1,7 @@
 export default function Solutions() {
   return (
     <div className="pt-32">
-        <section className="max-w-7xl mx-auto px-8 mb-24">
+        <section className="max-w-7xl mx-auto px-4 md:px-8 mb-24">
             <div className="flex flex-col md:flex-row gap-16 items-center">
                 <div className="w-full md:w-3/5">
                     <div className="flex items-center gap-3 mb-6">
@@ -34,7 +34,7 @@ export default function Solutions() {
             </div>
         </section>
 
-        <section className="max-w-7xl mx-auto px-8 mb-32">
+        <section className="max-w-7xl mx-auto px-4 md:px-8 mb-32">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
                 <div className="md:col-span-8 group">
                     <div className="kinetic-card p-10 h-full flex flex-col justify-between relative overflow-hidden">
@@ -139,7 +139,7 @@ export default function Solutions() {
             </div>
         </section>
 
-        <section className="max-w-7xl mx-auto px-8 mb-32">
+        <section className="max-w-7xl mx-auto px-4 md:px-8 mb-32">
             <div className="bg-primary p-[1px]">
                 <div className="bg-black py-12 px-8 flex flex-col md:flex-row items-center justify-between gap-8">
                     <div className="text-left">
