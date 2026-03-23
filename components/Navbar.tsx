@@ -24,24 +24,12 @@ export default function Navbar() {
           <Link className={getLinkClass("/solutions")} href="/solutions">
             Solutions
           </Link>
-          <Link className={getLinkClass("/services")} href="/services">
-            Services
-          </Link>
           <Link className={getLinkClass("/about")} href="/about">
             About
           </Link>
-          <Link className={getLinkClass("/resources")} href="/resources">
-            Resources
-          </Link>
-          <Link
-            href="/contact"
-            className="bg-orange-500 text-black font-headline uppercase tracking-[0.1rem] text-xs font-bold px-6 py-3 rounded hover:bg-orange-400 active:scale-95 transition-transform"
-          >
-            Get a Quote
-          </Link>
         </div>
         <div className="md:hidden">
-          <button 
+          <button
             className="material-symbols-outlined text-orange-500 hover:text-orange-400 focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -57,21 +45,8 @@ export default function Navbar() {
             <Link className={getLinkClass("/solutions")} href="/solutions" onClick={() => setIsMobileMenuOpen(false)}>
               Solutions
             </Link>
-            <Link className={getLinkClass("/services")} href="/services" onClick={() => setIsMobileMenuOpen(false)}>
-              Services
-            </Link>
             <Link className={getLinkClass("/about")} href="/about" onClick={() => setIsMobileMenuOpen(false)}>
               About
-            </Link>
-            <Link className={getLinkClass("/resources")} href="/resources" onClick={() => setIsMobileMenuOpen(false)}>
-              Resources
-            </Link>
-            <Link
-              href="/contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="bg-orange-500 text-black font-headline uppercase tracking-[0.1rem] text-xs font-bold px-6 py-3 rounded hover:bg-orange-400 active:scale-95 transition-transform mt-4 w-full text-center"
-            >
-              Get a Quote
             </Link>
           </div>
         </div>
