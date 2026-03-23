@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#181818]/57 backdrop-blur-xl">
-      <div className="flex justify-between items-center px-3 md:px-10 py-0 max-w-7xl mx-auto w-full min-h-[3rem] md:min-h-[3.2rem] relative">
+      <div className="flex justify-between items-center px-3 md:px-10 py-0 max-w-7xl mx-auto w-full min-h-[2.05rem] md:min-h-[2.35rem] relative">
         <Link href="/" onClick={handleLogoClick} className="-ml-1 md:-ml-2 flex shrink-0 items-center overflow-visible">
           <Image
             src="/logo.png"
