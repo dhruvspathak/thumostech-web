@@ -78,7 +78,7 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full relative z-10">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
-            <div className="mt-13 inline-flex items-center gap-3 px-6 py-3.5 rounded bg-surface-container-low border border-primary/20 hero-reveal">
+            <div className="mt-12 inline-flex items-center gap-3 px-6 py-4 rounded bg-surface-container-low border border-primary/20 hero-reveal">
               <span className="w-2 h-2 rounded-full bg-primary status-pulse"></span>
               <span className="font-label uppercase tracking-[0.15rem] text-[10px] font-bold text-primary">
                 Best in Class Security Services Activated
@@ -116,7 +116,7 @@ export default function Home() {
       </header>
 
       {/* ─── Services Carousel ─── */}
-      <section id="services" className="relative -mt-26 pt-23 pb-33">
+      <section id="services" className="scroll-mt-20 relative -mt-20 pt-20 pb-32 md:scroll-mt-24">
         <div className="pointer-events-none absolute inset-x-[-10%] top-[-7rem] h-72 bg-[radial-gradient(ellipse_at_center,rgba(232,84,42,0.1),rgba(0,0,0,0.06)_46%,transparent_78%)] blur-3xl"></div>
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/10 via-black/6 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 md:px-8">
