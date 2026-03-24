@@ -3,8 +3,8 @@ import SocialLinks from "@/components/SocialLinks";
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-zinc-800 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-4 md:px-8 py-16 max-w-7xl mx-auto w-full">
+    <footer className="bg-[#181818]/57 border-t border-primary/10 backdrop-blur-xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-4 md:px-8 py-16 max-w-7xl mx-auto w-full">
         <div className="space-y-6">
           <div className="text-lg font-bold text-primary font-headline uppercase tracking-widest">
             Thumos Tech
@@ -77,28 +77,10 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="space-y-6">
-          <h4 className="font-headline text-sm font-bold uppercase tracking-widest text-primary">
-            Join the Network
-          </h4>
-          <p className="font-body text-sm text-zinc-400">
-            Subscribe to our vulnerability intelligence updates.
-          </p>
-          <div className="flex">
-            <input
-              className="bg-zinc-950 border border-zinc-800 text-xs px-4 py-2 w-full focus:ring-1 focus:ring-primary outline-none rounded-l text-on-surface"
-              placeholder="Email Address"
-              type="email"
-            />
-            <button className="bg-primary text-white px-4 py-2 rounded-r hover:bg-secondary transition-colors">
-              <span className="material-symbols-outlined text-sm">send</span>
-            </button>
-          </div>
-        </div>
       </div>
-      <div className="max-w-7xl mx-auto py-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 px-4 md:px-8 text-center md:text-left">
+      <div className="max-w-7xl mx-auto py-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 px-4 md:px-8 text-center md:text-left">
         <p className="font-manrope text-sm tracking-widest uppercase text-zinc-500">
-          © 2026 Thumos Tech.
+          Copyright 2026 Thumos Tech.
         </p>
         <div className="flex gap-8">
           <span className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary">

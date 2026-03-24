@@ -22,14 +22,14 @@ const services = [
     title: "Security Audits",
     description:
       "Structured assessments to evaluate posture, identify control gaps, and prepare teams for remediation, compliance, and executive review.",
-    features: ["Vulnerability & Gap Assessment", "Compliance Readiness Reviews"],
+    features: ["Vulnerability and Gap Assessment", "Compliance Readiness Reviews"],
   },
   {
     icon: "support_agent",
     title: "24x7 AMC",
     description:
       "Always-on maintenance and operational support to keep critical security platforms healthy, tuned, and available around the clock.",
-    features: ["Preventive Health Checks", "Issue Resolution & Support"],
+    features: ["Preventive Health Checks", "Issue Resolution and Support"],
   },
   {
     icon: "code_blocks",
@@ -43,18 +43,21 @@ const services = [
     title: "Incident Response",
     description:
       "Rapid mobilization teams available 24/7 to contain, mitigate, and recover from breaches with minimal disruption.",
-    features: ["Containment & Recovery Support", "Root Cause Investigation"],
+    features: ["Containment and Recovery Support", "Root Cause Investigation"],
   },
 ];
 
 const LOOP_CLONE_COUNT = 3;
+const AUTO_SCROLL_INTERVAL = 3200;
+const RESET_DELAY = 720;
 
 export default function ServicesCarousel() {
   const [isPaused, setIsPaused] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardStep, setCardStep] = useState(0);
-  const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
+  const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  const resetTimerRef = useRef<number | null>(null);
 
   const loopedServices = useMemo(
     () => [...services, ...services.slice(0, LOOP_CLONE_COUNT)],
@@ -63,14 +66,18 @@ export default function ServicesCarousel() {
 
   useEffect(() => {
     const updateCardStep = () => {
+      const viewport = viewportRef.current;
       const track = trackRef.current;
       const firstCard = track?.querySelector<HTMLElement>("[data-carousel-card]");
 
-      if (!track || !firstCard) return;
+      if (!viewport || !track || !firstCard) return;
 
       const styles = window.getComputedStyle(track);
       const gap = parseFloat(styles.columnGap || styles.gap || "0");
-      setCardStep(firstCard.getBoundingClientRect().width + gap);
+      const nextCardStep = firstCard.getBoundingClientRect().width + gap;
+
+      setCardStep(nextCardStep);
+      viewport.scrollTo({ left: currentIndex * nextCardStep });
     };
 
     updateCardStep();
@@ -87,73 +94,82 @@ export default function ServicesCarousel() {
       resizeObserver.disconnect();
       window.removeEventListener("resize", updateCardStep);
     };
-  }, []);
+  }, [currentIndex]);
 
   useEffect(() => {
     if (isPaused || cardStep === 0) return;
 
     const intervalId = window.setInterval(() => {
       setCurrentIndex((prevIndex) => prevIndex + 1);
-    }, 2400);
+    }, AUTO_SCROLL_INTERVAL);
 
     return () => window.clearInterval(intervalId);
-  }, [isPaused, cardStep]);
+  }, [cardStep, isPaused]);
 
   useEffect(() => {
-    if (currentIndex !== services.length) return;
+    const viewport = viewportRef.current;
 
-    const timeoutId = window.setTimeout(() => {
-      setIsTransitionEnabled(false);
-      setCurrentIndex(0);
-    }, 640);
+    if (!viewport || cardStep === 0) return;
 
-    return () => window.clearTimeout(timeoutId);
-  }, [currentIndex]);
-
-  useEffect(() => {
-    if (isTransitionEnabled) return;
-
-    const frameId = window.requestAnimationFrame(() => {
-      setIsTransitionEnabled(true);
+    viewport.scrollTo({
+      left: currentIndex * cardStep,
+      behavior: "smooth",
     });
 
-    return () => window.cancelAnimationFrame(frameId);
-  }, [isTransitionEnabled]);
+    if (currentIndex < services.length) return;
+
+    if (resetTimerRef.current) {
+      window.clearTimeout(resetTimerRef.current);
+    }
+
+    resetTimerRef.current = window.setTimeout(() => {
+      viewport.scrollTo({ left: 0, behavior: "auto" });
+      setCurrentIndex(0);
+      resetTimerRef.current = null;
+    }, RESET_DELAY);
+  }, [cardStep, currentIndex]);
+
+  useEffect(() => {
+    return () => {
+      if (resetTimerRef.current) {
+        window.clearTimeout(resetTimerRef.current);
+      }
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const viewport = viewportRef.current;
+
+    if (!viewport || cardStep === 0) return;
+
+    const index = Math.round(viewport.scrollLeft / cardStep);
+    setCurrentIndex(index);
+  };
 
   const goToSlide = (index: number) => {
-    setIsTransitionEnabled(true);
     setCurrentIndex(index);
   };
 
   return (
     <div className="relative">
-      <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-        <p className="text-sm text-on-surface-variant">
-          Auto-rotating service highlights. Hover or touch the carousel to pause and explore a card.
-        </p>
-      </div>
 
       <div
-        className="overflow-hidden pb-4"
+        ref={viewportRef}
+        className="overflow-x-auto pb-4 scrollbar-hidden snap-x snap-mandatory"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={() => setIsPaused(true)}
         onTouchEnd={() => setIsPaused(false)}
         onFocusCapture={() => setIsPaused(true)}
         onBlurCapture={() => setIsPaused(false)}
+        onScroll={handleScroll}
       >
-        <div
-          ref={trackRef}
-          className={`flex gap-6 will-change-transform ${isTransitionEnabled ? "transition-transform duration-700 ease-out" : ""}`}
-          style={{
-            transform: `translateX(-${currentIndex * cardStep}px)`,
-          }}
-        >
+        <div ref={trackRef} className="flex gap-6">
           {loopedServices.map((service, index) => (
             <div
               key={`${service.title}-${index}`}
               data-carousel-card
-              className="group relative shrink-0 w-[84vw] sm:w-[30rem] lg:w-[25rem] bg-surface-container-low p-8 rounded border border-white/10 overflow-hidden transition-all hover:border-primary/40"
+              className="group relative shrink-0 snap-start w-[84vw] sm:w-[30rem] lg:w-[25rem] bg-surface-container-low p-8 rounded border border-white/10 overflow-hidden transition-all hover:border-primary/40"
             >
               <div className="relative z-10 flex flex-col h-full">
                 <div className="w-14 h-14 bg-primary/10 rounded flex items-center justify-center text-primary mb-6">

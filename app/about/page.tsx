@@ -11,11 +11,11 @@ export default function About() {
             <span className="font-label text-xs font-bold uppercase tracking-[0.1rem] text-primary">Established Experts</span>
           </div>
           <h1 className="font-headline text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter">
-            The Sentinel <br />
-            <span className="text-primary text-glow">Overlay Protection.</span>
+            Security Experts <br />
+            <span className="text-primary text-glow">to guide you.</span>
           </h1>
           <p className="text-zinc-400 text-lg max-w-lg leading-relaxed">
-            At Thumos Tech, we don&apos;t just secure data; we build the digital fortifications that allow innovation to flourish without fear.
+            At Thumos Tech, we don&apos;t just secure organizations, we build the digital fortifications that allow innovation to flourish without fear.
           </p>
         </div>
         <div className="w-full md:w-1/2 relative">
@@ -80,30 +80,12 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="group">
             <div className="aspect-[4/5] overflow-hidden rounded-sm mb-6 bg-surface-container-high relative border border-transparent group-hover:border-primary/30 transition-all duration-500">
-              <Image alt="Executive male" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZE9Plphjtd89aIAZWbqQmTgeu7Xq4GmTILmGz1MHCL_VtQLW1mUih8-rjbV2OG3bZ16qfLTxGBAih9F5BsydJNwGKByX8mi1Bzdbz7ZHFUD555-Q66JSki8NqdyxGB_9genmJg44WlBtnhKWzD43dR2yUub8w5e2LZXSY0KxObzrTQBdSzllKMUXI3WZhKETbhkXkdeskawRbKFJ3uWo6CGhZmeE94kWi8aak_GMO_rcxxP9KOQAyK4NwipzIKpFKLQ2ESkexXxI" width={800} height={1000} sizes="(min-width: 768px) 28vw, 100vw" />
+              <Image alt="Sanjeev Dhuliya" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="/ceo-portfolio.png" width={800} height={1000} sizes="(min-width: 768px) 28vw, 100vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
             </div>
-            <h4 className="font-headline text-2xl font-bold">Marcus Vane</h4>
+            <h4 className="font-headline text-2xl font-bold">Sanjeev Dhuliya</h4>
             <p className="text-secondary font-label text-xs uppercase tracking-widest font-bold mb-4">Chief Executive Officer</p>
-            <p className="text-zinc-400 text-sm leading-relaxed">Former Director of Cybersecurity at Global Defense. 20+ years of experience in state-level infrastructure protection.</p>
-          </div>
-          <div className="group">
-            <div className="aspect-[4/5] overflow-hidden rounded-sm mb-6 bg-surface-container-high relative border border-transparent group-hover:border-primary/30 transition-all duration-500">
-              <Image alt="Executive female" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp3u6qc_TMbRNzdqwa9hnNAHjKgItSle0XIiOdJ4p7IAkhjR8pkOxrugXvLoqE-HcyALehVp9m8PuspA-CS2pgsdw6uYEbM2p1SZZ98y2Encyjs5de7ZVQescmH2tc_bQM0JNBH4Yx6Zj6dkwAf-rrQRn6ZN3PN_Ab-7ZekO6ixS7Vu3VnxQCzkPhew6gLtw_9evxx_lP8UuIJVWOTb2OabI_pzbt7RqhDNVhCTmGrnh7_TJaUpYFNaX0GAb8KQKbN_AZ-7AsHUhc" width={800} height={1000} sizes="(min-width: 768px) 28vw, 100vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-            </div>
-            <h4 className="font-headline text-2xl font-bold">Dr. Elena Thorne</h4>
-            <p className="text-secondary font-label text-xs uppercase tracking-widest font-bold mb-4">Chief Technology Officer</p>
-            <p className="text-zinc-400 text-sm leading-relaxed">Pioneer in Cryptography and AI-driven threat detection systems. Recipient of the Sentinel Security Excellence Award.</p>
-          </div>
-          <div className="group">
-            <div className="aspect-[4/5] overflow-hidden rounded-sm mb-6 bg-surface-container-high relative border border-transparent group-hover:border-primary/30 transition-all duration-500">
-              <Image alt="Executive male" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFyJdKDRp6drvnPlBgg31FwK0VBDOVxEPz3tegE2iQgUP4lhdcGJcVMRdnzvs3eYDprNQlEIJZ_tUjWYPKHDOz1ZY_XHDR-TeFh2yEyAz5s1F_Or7-lVp12LAu60rX-9QhNd_hnJMpUtj2LzuKB_8SVDx6hVkcgiRpzNhEyALvjV095BFmOfChAvvlY9qNwvU-ppHVl1nFDt8aOiqu4he0Gr15A2mcoTuaycw3NjsEFpbB6UnpLOBuMWW57bXr-_lETJZ3t__-3Bo" width={800} height={1000} sizes="(min-width: 768px) 28vw, 100vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-            </div>
-            <h4 className="font-headline text-2xl font-bold">Julian Cross</h4>
-            <p className="text-secondary font-label text-xs uppercase tracking-widest font-bold mb-4">Head of Operations</p>
-            <p className="text-zinc-400 text-sm leading-relaxed">Specializing in global compliance and rapid-response infrastructure for Fortune 500 partners.</p>
+            <p className="text-zinc-400 text-sm leading-relaxed">Sanjeev is a dynamic personality, he is a true sales person , who believes in numbers but at the same time constantly understand the solution around it. Sanjeev is a great friend, colleague and most importantly focused person. He was instrumental in some of the big deals in India for IDS then and later Software AG India. I wish him all the best for his future assignments.</p>
           </div>
         </div>
       </section>
