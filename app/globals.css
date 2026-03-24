@@ -136,11 +136,19 @@ html {
 }
 
 .marquee-track {
-  animation: marquee 30s linear infinite;
+  animation: marquee 42s linear infinite;
 }
 
 .marquee-track-fast {
-  animation-duration: 11s;
+  animation-duration: 18s;
+}
+
+.marquee-track-customer {
+  animation: marquee-customer 36s linear infinite;
+}
+
+.marquee-track-customer-fast {
+  animation-duration: 15s;
 }
 
 .marquee-track:hover {
@@ -158,8 +166,8 @@ html {
 }
 
 .animate-ribbon {
-  stroke-dasharray: 260 500;
-  animation: ribbon-pan 10.5s linear infinite;
+  stroke-dasharray: 360 620;
+  animation: ribbon-pan 18s linear infinite;
   will-change: stroke-dashoffset;
   filter: drop-shadow(0 0 14px rgba(232, 84, 42, 0.45));
 }
@@ -178,6 +186,16 @@ html {
 
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-customer {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.3333%);
   }
 }
 
@@ -234,17 +252,17 @@ html {
 }
 
 .animate-float {
-  animation: float 11s ease-in-out infinite;
+  animation: float 17s ease-in-out infinite;
   will-change: transform;
 }
 
 .animate-float-delayed {
-  animation: float 14s ease-in-out infinite reverse;
+  animation: float 21s ease-in-out infinite reverse;
   will-change: transform;
 }
 
 .animate-pulse-slow {
-  animation: pulse-slow 4.5s ease-in-out infinite;
+  animation: pulse-slow 7.5s ease-in-out infinite;
   will-change: opacity, transform;
 }
 
@@ -252,7 +270,7 @@ html {
   background-image: linear-gradient(to right, rgba(232, 84, 42, 0.32) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(242, 122, 80, 0.28) 1px, transparent 1px);
   background-size: 52px 52px;
-  animation: grid-move 10s linear infinite;
+  animation: grid-move 22s linear infinite;
   will-change: background-position;
 }
 
@@ -329,6 +347,7 @@ html {
   .bg-grid-pattern,
   .status-pulse,
   .marquee-track,
+  .marquee-track-customer,
   .hero-reveal {
     animation: none !important;
   }

@@ -65,8 +65,8 @@ export default function Home() {
           <div className="absolute bottom-[26%] right-[3%] animate-float-delayed opacity-100 pointer-events-none">
             <div className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-secondary/55 bg-secondary/18 text-[9px] md:text-[10px] font-bold text-secondary tracking-[0.22em] uppercase shadow-[0_0_36px_rgba(242,122,80,0.28)] backdrop-blur-sm">Security That Scales</div>
           </div>
-          <div className="absolute right-[8%] top-[32%] animate-float opacity-100 pointer-events-none">
-            <div className="px-3 py-1.5 rounded-full border border-primary/45 bg-black/35 text-[9px] font-bold text-primary tracking-[0.2em] uppercase shadow-[0_0_30px_rgba(232,84,42,0.24)] backdrop-blur-sm md:hidden">24/7 Threat Readiness</div>
+          <div className="absolute left-[5%] top-[47%] animate-float opacity-100 pointer-events-none md:left-[7%] md:top-[46%]">
+            <div className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-primary/45 bg-black/35 text-[9px] md:text-[10px] font-bold text-primary tracking-[0.2em] uppercase shadow-[0_0_30px_rgba(232,84,42,0.24)] backdrop-blur-sm">24/7 Threat Readiness</div>
           </div>
           <div className="absolute right-[18%] top-[22%] animate-float opacity-100 pointer-events-none hidden lg:block">
             <div className="px-4 py-2 rounded-full border border-primary/45 bg-black/30 text-[10px] font-bold text-primary tracking-widest uppercase shadow-[0_0_30px_rgba(232,84,42,0.24)] backdrop-blur-sm">Next-Gen Security Stack</div>
@@ -89,11 +89,6 @@ export default function Home() {
                 #1 cybersecurity partner
               </h1>
             </div>
-            <p className="text-white text-[1.15rem] md:text-[1.4rem] max-w-xl leading-relaxed hero-reveal hero-reveal-delay-2">
-              From Exposed to Unbreakable
-              <br />
-              Cybersecurity Services for Modern Enterprises.
-            </p>
             <div className="flex flex-wrap justify-center gap-6 pt-4 hero-reveal hero-reveal-delay-3">
               <a
                 href="#services"
@@ -148,6 +143,13 @@ export default function Home() {
           </p>
         </div>
         <CustomersCarousel />
+        <div className="max-w-7xl mx-auto px-4 md:px-8 mt-12">
+          <div className="relative flex items-center justify-center">
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/35 to-transparent"></div>
+            <div className="absolute h-2 w-24 rounded-full bg-primary/30 blur-md"></div>
+            <div className="absolute h-1 w-10 rounded-full bg-primary/70"></div>
+          </div>
+        </div>
       </section>
 
       {/* ─── Book Demo ─── */}
