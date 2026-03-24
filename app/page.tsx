@@ -53,7 +53,7 @@ export default function Home() {
       </div>
       <div className="relative z-10">
       {/* ─── Hero Section ─── */}
-      <header className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <header className="relative min-h-screen flex items-center pt-12 md:pt-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/20 to-transparent"></div>
           <div className="absolute inset-x-[14%] top-[18%] h-48 bg-gradient-to-r from-transparent via-white/4 to-transparent blur-3xl"></div>
@@ -78,7 +78,7 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full relative z-10">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
-            <div className="mt-12 inline-flex items-center gap-3 px-6 py-4 rounded bg-surface-container-low border border-primary/20 hero-reveal">
+            <div className="mt-8 md:mt-16 inline-flex items-center gap-3 px-6 py-4 rounded bg-surface-container-low border border-primary/20 hero-reveal">
               <span className="w-2 h-2 rounded-full bg-primary status-pulse"></span>
               <span className="font-label uppercase tracking-[0.15rem] text-[10px] font-bold text-primary">
                 Best in Class Security Services Activated
